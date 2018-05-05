@@ -12,7 +12,14 @@
                 dataType: 'json'
             }).done(function (json) {
                 console.log(json)
-
+                $.each(json, function (index, employee) {
+                    console.log(employee)
+                    var str = '<tr><td>' + employee.id + '</td>' +
+                            '<td>' + employee.name + '</td>' +
+                            '<td>' + employee.age + '</td>' +
+                            '<td>' + employee.gender + '</td></tr>'
+                    $('table').append(str)
+                });
             }).fail(function (xhr, status, errorThrown) {
                 alert('数据加载失败.');
                 console.log('Error: ' + errorThrown);
