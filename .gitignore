@@ -1,3 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea
+*.iml
+out
+gen### Gradle template
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
 # Compiled class file
 *.class
 
