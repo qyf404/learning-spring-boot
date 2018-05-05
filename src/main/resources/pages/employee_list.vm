@@ -1,9 +1,10 @@
 <html>
 
-<header>
+<head>
     <title>#{title}</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/4.1.0/css/bootstrap.min.css' />
     <script type="text/javascript" src="/webjars/jquery/3.3.1/jquery.min.js" ></script>
-</header>
+</head>
 <body>
 <table>
 <tr>
