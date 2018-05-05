@@ -3,10 +3,7 @@ package com.thoughtworks.apple.controller;
 import com.thoughtworks.apple.domain.Employee;
 import com.thoughtworks.apple.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,4 +23,10 @@ public class EmployeeController {
     Employee getEmployee(@PathVariable Long id) {
         return employeeService.getEmployee(id);
     }
+
+    @RequestMapping( method = RequestMethod.POST)
+    Employee saveEmployee(@RequestBody Employee employee) {
+        return employeeService.saveEmployee(employee);
+    }
+
 }

@@ -74,4 +74,11 @@ public class EmployeeService {
     public Employee getEmployee(Long id) {
         return employeeMap.get(id);
     }
+
+    public Employee saveEmployee(Employee employee) {
+        Long id = getNextId();
+        employee.setId(id);
+        employeeMap.put(id, employee);
+        return employee;
+    }
 }
