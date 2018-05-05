@@ -53,4 +53,19 @@ public class EmployeeControllerTest {
                 .expectStatus().isOk()
                 .expectBody().json(expected);
     }
+
+    @Test
+    public void should_get_employee() {
+        String expected =
+                "    {" +
+                "      \"id\": 1," +
+                "      \"name\": \"小红\"," +
+                "      \"age\": 19," +
+                "      \"gender\": \"女\"  " +
+                "    }";
+
+        this.webClient.get().uri("/employees/1").exchange()
+                .expectStatus().isOk()
+                .expectBody().json(expected);
+    }
 }
