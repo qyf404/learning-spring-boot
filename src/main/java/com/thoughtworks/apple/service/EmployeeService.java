@@ -70,4 +70,8 @@ public class EmployeeService {
     public List<Employee> getEmployees() {
         return new ArrayList<>(employeeMap.values());
     }
+
+    public Employee getEmployee(Long id) {
+        return employeeMap.get(id);
+    }
 }
