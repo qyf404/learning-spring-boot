@@ -33,7 +33,7 @@
 </head>
 <body>
 <table class="table table-striped">
-    <tr>
+    <tr class="bg-dark text-white">
         <th scope="col">编号</th>
         <th scope="col">姓名</th>
         <th scope="col">年龄</th>
