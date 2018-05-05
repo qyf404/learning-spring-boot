@@ -53,4 +53,40 @@ public class Employee {
 
         return Objects.hash(id);
     }
+
+    public static class Builder {
+        private Long id;
+        private String name;
+        private int age;
+        private String gender;
+
+        public Builder setId(Long id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder setAge(int age) {
+            this.age = age;
+            return this;
+        }
+
+        public Builder setGender(String gender) {
+            this.gender = gender;
+            return this;
+        }
+
+        public Employee build() {
+            Employee employee = new Employee();
+            employee.setId(id);
+            employee.setName(name);
+            employee.setAge(age);
+            employee.setGender(gender);
+            return employee;
+        }
+    }
 }
